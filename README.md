@@ -64,4 +64,4 @@ Déploiement
 -----------
 
 Ce projet a été déployé sur Azure.  
-Voici le lien : [mettre ici le lien]
+Voici le lien : https://calculatrice2280632.azurewebsites.net/

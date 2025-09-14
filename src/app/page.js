@@ -146,26 +146,31 @@ export default function Calculatrice() {
                     return (
                         <Btn
                             key={i}
-                            className={
-                                `${btn === "=" ? "equals col-span-2 bg-yellow-600 text-black" : ""} 
-                                ${activeBtn === btn ? "ring-2 ring-white-500" : ""}`}                          
+                            
+                           className={`
+                            ${btn === "=" 
+                                ? "col-span-2 bg-yellow-600 text-black hover:bg-yellow-500" 
+                                : "bg-gray-700 text-white hover:bg-gray-600"}
+                            ${activeBtn === btn ? "ring-2 ring-white" : ""}
+                            `}
+
                             value={btn}
-                            onClick={(e) =>{
+                            onClick={(e) => {
                                 setActiveBtn(btn)
                                 setTimeout(() => setActiveBtn(null), 150);
                                 btn === "C"
-                                    ? handleReset()
-                                    : btn === "+-"
-                                    ? handleInverts()
-                                    : btn === "%"
-                                    ? handlePercents()
-                                    : btn === "="
-                                    ? handleEquals()
-                                    : btn === "/" || btn === "X" || btn === "-" || btn === "+"
-                                    ? handleSigns(e)
-                                    : btn === "."
-                                    ? handleCommas(e)
-                                    : handleNums(e)
+                                ? handleReset()
+                                : btn === "+-"
+                                ? handleInverts()
+                                : btn === "%"
+                                ? handlePercents()
+                                : btn === "="
+                                ? handleEquals()
+                                : btn === "/" || btn === "X" || btn === "-" || btn === "+"
+                                ? handleSigns(e)
+                                : btn === "."
+                                ? handleCommas(e)
+                                : handleNums(e)
                             }}
                         />
                     )

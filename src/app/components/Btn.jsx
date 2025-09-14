@@ -1,10 +1,10 @@
-export default function Btn ({ className, value, onClick }) {
+export default function Btn({ className, value, onClick }) {
     return (
         <button
-        className={`bg-gray-700 hover:bg-gray-600 text-white py-4 rounded-lg text-lg ${className}`}
-        onClick={onClick}
+            className={`py-4 rounded-lg text-lg w-full transition duration-10 ease-in-out ${className}`}
+            onClick={onClick}
         >
-        {value}
+            {value}
         </button>
     )
 }

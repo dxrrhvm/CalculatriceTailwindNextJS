@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Calculatrice React + Next.js + Tailwind CSS
+===========================================
 
-## Getting Started
+Calculatrice moderne et responsive construite avec React, Next.js et Tailwind CSS. Ce projet m'a permis d'en apprendre davantage sur **Next.js** et **Tailwind CSS**, car j'avais déjà utilisé des frameworks similaires mais pas ceux-ci.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Fonctionnalités
+---------------
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Opérations de base : addition, soustraction, multiplication, division
+- Fonctions supplémentaires :
+  - C : réinitialiser
+  - +/- : inverser le signe
+  - % : calcul du pourcentage
+- Responsive : compatible mobile et desktop
+- Design moderne : stylisé avec Tailwind CSS
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Technologies utilisées
+---------------------
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- React
+- Next.js
+- Tailwind CSS
 
-## Learn More
+Installation
+------------
 
-To learn more about Next.js, take a look at the following resources:
+1. Cloner le dépôt :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   git clone https://github.com/votre-utilisateur/calculatrice.git
+   cd calculatrice
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Installer les dépendances :
 
-## Deploy on Vercel
+   npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Lancer l'application en mode développement :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   npm run dev
+
+4. Ouvrir le navigateur :
+
+   http://localhost:3000
+
+Structure du projet
+------------------
+
+/components
+  ├─ Wrapper.jsx       # Conteneur principal de la calculatrice
+  ├─ Screen.jsx        # Affichage des chiffres et résultats
+  ├─ ButtonBox.jsx     # Conteneur des boutons
+  └─ Button.jsx        # Composant bouton
+
+Ressources utilisées
+-------------------
+
+- Tutoriel SitePoint : https://www.sitepoint.com/react-tutorial-build-calculator-app/
+  Guide pour la logique de la calculatrice et la gestion des états.
+- Documentation Next.js
+- Documentation Tailwind CSS : https://tailwindcss.com/
+  Pour le design responsive et stylisé.
+
+Déploiement
+-----------
+
+Ce projet a été déployé sur Azure.  
+Voici le lien : [mettre ici le lien]

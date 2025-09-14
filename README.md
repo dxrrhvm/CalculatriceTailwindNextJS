@@ -59,7 +59,7 @@ Ressources utilisées
 - Documentation Next.js
 - Documentation Tailwind CSS : https://tailwindcss.com/
   Pour le design responsive et stylisé.
-
+- ChatGPT pour l'amélioration de l'UI
 Déploiement
 -----------
 

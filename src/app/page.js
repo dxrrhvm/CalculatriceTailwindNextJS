@@ -22,6 +22,7 @@ const removeSpaces = (num) => num.toString().replace(/\s/g, "");
 
 
 export default function Calculatrice() {
+    const [activeBtn, setActiveBtn] = useState(null);
     const [input, setInput] = useState({
         sign: "",
         num: 0,
@@ -129,30 +130,43 @@ export default function Calculatrice() {
 
     return (
         <Wrapper>
-            <Screen value={input.num ? input.num : input.res} />
+            {/*             
+            <Screen value={input.num ? input.num : input.res} /> */}
+
+            <Screen value={
+                input.sign
+                    ? `${input.res ? input.res : 0} ${input.sign} ${input.num ? input.num : 0}`
+                    : input.num
+                        ? input.num
+                        : input.res
+            } />
 
             <BtnBox>
                 {btnValues.flat().map((btn, i) => {
                     return (
                         <Btn
-                        key={i}
-                        className={btn === "=" ? "equals" : ""}
-                        value={btn}
-                        onClick={
-                            btn === "C"
-                            ? handleReset
-                            : btn === "+-"
-                            ? handleInverts
-                            : btn === "%"
-                            ? handlePercents
-                            : btn === "="
-                            ? handleEquals
-                            : btn === "/" || btn === "X" || btn === "-"  || btn === "+"
-                            ? handleSigns
-                            : btn === "."
-                            ? handleCommas
-                            : handleNums
-                        }
+                            key={i}
+                            className={
+                                `${btn === "=" ? "equals col-span-2 bg-yellow-600 text-black" : ""} 
+                                ${activeBtn === btn ? "ring-2 ring-white-500" : ""}`}                          
+                            value={btn}
+                            onClick={(e) =>{
+                                setActiveBtn(btn)
+                                setTimeout(() => setActiveBtn(null), 150);
+                                btn === "C"
+                                    ? handleReset()
+                                    : btn === "+-"
+                                    ? handleInverts()
+                                    : btn === "%"
+                                    ? handlePercents()
+                                    : btn === "="
+                                    ? handleEquals()
+                                    : btn === "/" || btn === "X" || btn === "-" || btn === "+"
+                                    ? handleSigns(e)
+                                    : btn === "."
+                                    ? handleCommas(e)
+                                    : handleNums(e)
+                            }}
                         />
                     )
                 })}
